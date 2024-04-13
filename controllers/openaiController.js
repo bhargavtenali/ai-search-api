@@ -21,9 +21,10 @@ const generateMeta = async (req, res) => {
         )}
         Each object has multiple keys and corresponding values. Out of them uiFieldName, filterFieldName and rootFieldName keys are my fields of interest.
         You are also given user entered search text (userInput) - ${userInput}
-        give me the objects in fieldsArray whose uiFieldName or filterFieldName field values are present in userInput or best matching with any words of userInput. 
-        give uiFieldName, filterFieldName, rootFieldName of matched objects as response. give response as json object with key matchedFields
-        
+        give me the objects in fieldsArray whose uiFieldName or filterFieldName field values are present in userInput or best matching with any words of userInput.
+        give uiFieldName, filterFieldName, rootFieldName of matched objects as response. give response as an array against key matchedFields in json object
+        for every matchedField also give the corresponding part of userInput that matched with that field against key matchedSubString
+
         We have a mongoDB database where rootFieldName is actual db field for the corresponding object.
         This is sample data of our mongoDB database - ${JSON.stringify(
           mongoRecords1
