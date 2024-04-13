@@ -1,3 +1,4 @@
+const { response } = require("express");
 const openai = require("../config/openaiConfig");
 const fieldsArray = require("../Fields.json");
 const mongoRecords1 = require("../mongoRecords1.json");
@@ -34,7 +35,7 @@ const generateMeta = async (req, res) => {
     ],
   });
   res.status(200).json({
-    tags: JSON.parse(openAiResponse.choices[0].message.content),
+    message: JSON.parse(openAiResponse.choices[0].message.content),
   });
 };
 
