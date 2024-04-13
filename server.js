@@ -29,4 +29,4 @@ app.get("/api/home", (req, res) => {
 });
 
 // routes
-app.post("/openai/meta", generateMeta);
+app.post("/openai/tags", generateMeta);
