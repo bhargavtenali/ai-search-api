@@ -32,7 +32,8 @@ const generateMeta = async (req, res) => {
         I want to construct a chart for the userInput search text. But I need to query required data from our mongoDB database
         you need to construct mongoDB query with matched rootFieldName fields and their values (extracted from userInput).
         construct query in such a way that it gives relevant information for constructing a chart based on userInput search text.
-        give me the db query along with above response as json object with key mongoDBQuery.
+        I have to run db query through Mongoose in the node express server
+        give me the parameters for mongoose find() function along with above response as json object with key mongoDBQuery.
         
         userInput might not be fully complete.
         give me upto 2 autocomplete predictions for userInput and corresponding matchedFields and corresponding mongoDBQuery.

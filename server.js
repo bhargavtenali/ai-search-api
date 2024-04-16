@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const { generateMeta } = require("./controllers/openaiController");
+const { performDbQuery } = require("./controllers/dbController");
 
 const app = express();
 const cors = require("cors");
@@ -30,3 +31,5 @@ app.get("/api/home", (req, res) => {
 
 // routes
 app.post("/openai/search", generateMeta);
+
+app.post("/db/query", performDbQuery);
