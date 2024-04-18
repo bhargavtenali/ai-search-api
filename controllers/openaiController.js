@@ -34,10 +34,8 @@ const generateMeta = async (req, res) => {
           Guidelines on how to send the response: give me the filter, projection, options for Mongoose find() query as json object against key mongoDBQuery.
 
           Task 3 - user query might not be fully complete.
-          give me upto 2 autocomplete predictions for user query and corresponding matchedFields and corresponding mongoDBQuery.
+          give me upto 5 autocomplete predictions for user query. perform task 1 and task 2 on each prediction and give me corresponding matchedFields and mongoDBQuery.
           Guidelines on how to send the response: give them as json object against key autocomplete.
-          add 3 tasks add guidelines explain what it needs to be sent as response
-          keep varialbe data only in user rest in system
           `,
       },
       {
